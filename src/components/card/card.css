@@ -1,0 +1,14 @@
+.card-img {
+  object-fit: cover;
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #4a4b4d;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
