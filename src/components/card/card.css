@@ -28,8 +28,8 @@
 }
 
 .card-text {
-  font-size: 14px;
-  color: #4a4b4d;
+  font-size: var(--font-size-normal);
+  color: var(--font-primary-color);
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
