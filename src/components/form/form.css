@@ -7,3 +7,15 @@
 .form .input {
   margin-top: 2em;
 }
+
+.ver-form {
+  display: grid;
+  text-align: center;
+}
+
+.input-cols {
+  display: grid;
+  grid-template-columns: 56px 56px 56px 56px;
+  grid-column-gap: 1em;
+  justify-content: center;
+}
