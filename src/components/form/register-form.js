@@ -10,29 +10,32 @@
 // }
 
 export function createRegisterForm() {
-    const form = document.createElement("form");
-    form.className = "form";
+  const form = document.createElement("form");
+  form.className = "form";
 
-    const paragraph = document.createElement("p");
-    paragraph.innerText = "Please enter your email to receive a link to create a new password via email";
+  const paragraph = document.createElement("p");
+  paragraph.innerText =
+    "Please enter your email to receive a link to create a new password via email";
 
-    const title = document.createElement("h2");
-    title.innerText = "Reset Password";
+  const title = document.createElement("h2");
+  title.innerText = "Reset Password";
 
-    const input = document.createElement("input");
-    input.placeholder = "Email";
+  const input = document.createElement("input");
+  input.type = "email";
+  input.placeholder = "E-mail";
+  input.className = "input";
 
-    const button = document.createElement("button");
-    button.innerText = "Submit";
+  const button = document.createElement("button");
+  button.innerText = "Submit";
 
+  function register() {
+    alert("Submitted!");
+  }
 
-    function register() {
-        alert("Submitted!");
-    };
+  button.addEventListener("click", register);
+  button.className = "btn";
 
-    button.addEventListener("click", register);
+  form.append(title, paragraph, input, button);
 
-    form.append(title, paragraph, input, button);
-
-    return form; 
-};
+  return form;
+}
