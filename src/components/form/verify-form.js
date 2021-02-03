@@ -11,6 +11,16 @@
 // <p>Didn't Receive?</p><a href="#">Click here</a> */
 // }
 
+function createOTPInput() {
+  const input = document.createElement("input");
+  input.type = "password";
+  input.placeholder = "*";
+  input.className = "input input-sm";
+  input.maxLength = 1;
+
+  return input;
+}
+
 export function createVerifyForm() {
   const form = document.createElement("form");
   form.className = "ver-form";
@@ -24,10 +34,19 @@ export function createVerifyForm() {
   txtInfo.innerText =
     "Please check your mobile number 071*****12 continue to reset your password";
 
-  // Input fields
+  // // Input fields (old)
+  // const inputs = document.createElement("div");
+  // inputs.innerHTML = `<input type="password" class="input input-sm" placeholder="*"><input type="password" class="input input-sm" placeholder="*"><input type="password" class="input input-sm" placeholder="*"><input type="password" class="input input-sm" placeholder="*">`;
+  // inputs.className = "input-cols";
+
+  // Input fields (new)
   const inputs = document.createElement("div");
-  inputs.innerHTML = `<input type="password" class="input input-sm" placeholder="*"><input type="password" class="input input-sm" placeholder="*"><input type="password" class="input input-sm" placeholder="*"><input type="password" class="input input-sm" placeholder="*">`;
   inputs.className = "input-cols";
+
+  const inputOne = createOTPInput();
+  const inputTwo = createOTPInput();
+  const inputThree = createOTPInput();
+  const inputFour = createOTPInput();
 
   // Button
   const button = document.createElement("button");
@@ -41,10 +60,6 @@ export function createVerifyForm() {
 
   button.addEventListener("click", submit);
 
-  //   // Text + Link
-  //   const txtLink = document.createElement("div");
-  //   txtLink.innerHTML = `<p>Didn't Receive? <a href="#"><b>Click here</b></a></p>`;
-
   // Text-Link
   const txtProblem = document.createElement("p");
   txtProblem.innerText = "Didn't Receive?";
@@ -54,7 +69,9 @@ export function createVerifyForm() {
   link.innerText = " Click here";
   link.href = "#";
 
+  inputs.append(inputOne, inputTwo, inputThree, inputFour);
   txtProblem.append(link);
+
   form.append(title, txtInfo, inputs, button, txtProblem);
 
   // Form Deployment
