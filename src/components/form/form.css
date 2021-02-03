@@ -1,0 +1,45 @@
+.reg-form {
+  display: grid;
+  grid-row-gap: 1em;
+  text-align: center;
+  padding: 2em 2em;
+}
+
+.reg-form .input {
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+}
+
+.reg-form h2 {
+  margin: 0;
+}
+
+.reg-form p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.ver-form {
+  display: grid;
+  text-align: center;
+  padding: 2em 2em;
+}
+
+.input-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 3.2em);
+  grid-column-gap: 1em;
+  justify-content: center;
+  margin: 0;
+  padding-top: 2.5em;
+  padding-bottom: 2.2em;
+}
+
+.ver-form .btn {
+  margin-bottom: 1.2em;
+}
+
+.ver-form h2 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}

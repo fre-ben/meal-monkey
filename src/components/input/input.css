@@ -7,6 +7,17 @@
   outline: none;
 }
 
+.input-sm {
+  border-radius: 12px;
+}
+
+.input-sm::placeholder {
+  font-size: 2.5em;
+  text-align: center;
+  position: relative;
+  top: 12px;
+}
+
 ::placeholder {
   color: var(--font-placeholder-color);
 }

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @font-face {
   font-family: "Metropolis";
   src: url("./assets/metropolis.woff2") format("woff2"),
@@ -37,4 +36,22 @@ optgroup,
 textarea {
   margin: 0;
   font-family: "Metropolis", sans-serif;
+}
+
+/* Link styling */
+a,
+a:visited,
+a:active,
+a:hover {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--font-primary-color);
+}
+
+p {
+  color: var(--font-secondary-color);
 }
