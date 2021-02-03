@@ -11,7 +11,7 @@
 
 export function createRegisterForm() {
   const form = document.createElement("form");
-  form.className = "form";
+  form.className = "reg-form";
 
   const paragraph = document.createElement("p");
   paragraph.innerText =

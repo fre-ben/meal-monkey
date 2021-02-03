@@ -4,7 +4,7 @@ import { createVerifyForm } from "./verify-form.js";
 
 export default {
   title: "Components/Form",
-  parameters: { layout: "centered" },
+  parameters: { layout: "fullscreen" },
 };
 
 export const register = () => createRegisterForm();
