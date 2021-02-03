@@ -12,10 +12,10 @@
 }
 
 .input-sm::placeholder {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
   position: relative;
-  top: 17px;
+  top: 12px;
 }
 
 ::placeholder {
