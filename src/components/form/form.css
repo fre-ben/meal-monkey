@@ -27,7 +27,7 @@
 
 .input-cols {
   display: grid;
-  grid-template-columns: repeat(4, 3.2em);
+  grid-template-columns: repeat(4, 4em);
   grid-column-gap: 1em;
   justify-content: center;
   margin: 0;
@@ -42,4 +42,8 @@
 .ver-form h2 {
   padding-bottom: 0;
   margin-bottom: 0;
+}
+
+.msgElement {
+  visibility: hidden;
 }
