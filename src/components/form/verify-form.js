@@ -1,11 +1,6 @@
 import { createElement } from "../../utils/createElement";
 
 function createOTPInput() {
-  // const input = document.createElement("input");
-  // input.type = "password";
-  // input.placeholder = "*";
-  // input.className = "input input-sm";
-  // input.maxLength = 1;
   const input = createElement("input", {
     type: "password",
     placeholder: "*",
@@ -38,6 +33,7 @@ function createInputs() {
   return inputs;
 }
 
+// Build Website function
 export function createVerifyForm() {
   const form = createForm();
 
