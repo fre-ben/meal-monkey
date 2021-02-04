@@ -1,0 +1,8 @@
+.portion-picker {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.portion-picker h3 {
+  padding-right: 3.5em;
+}
