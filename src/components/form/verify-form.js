@@ -1,29 +1,44 @@
-// {
-//   /* <h2>We have sent an OTP to your Mobile</h2>
-// <p>Please check your mobile number 071*****12 continue to reset your password</p>
-// <div>
-//     <input type="text" placeholder="*">
-//     <input type="text" placeholder="*">
-//     <input type="text" placeholder="*">
-//     <input type="text" placeholder="*">
-// </div>
-// <button>Next</button>
-// <p>Didn't Receive?</p><a href="#">Click here</a> */
-// }
+import { createElement } from "../../utils/createElement";
 
 function createOTPInput() {
-  const input = document.createElement("input");
-  input.type = "password";
-  input.placeholder = "*";
-  input.className = "input input-sm";
-  input.maxLength = 1;
+  const input = createElement("input", {
+    type: "password",
+    placeholder: "*",
+    className: "input input-sm",
+    maxLength: 1,
+  });
 
   return input;
 }
 
+function createForm() {
+  const form = createElement("form", {
+    className: "ver-form",
+  });
+
+  return form;
+}
+
+function createInputs() {
+  const inputOne = createOTPInput();
+  const inputTwo = createOTPInput();
+  const inputThree = createOTPInput();
+  const inputFour = createOTPInput();
+
+  const inputs = createElement("div", {
+    className: "input-cols",
+    children: [inputOne, inputTwo, inputThree, inputFour],
+  });
+
+  return inputs;
+}
+
+// Build Website function
 export function createVerifyForm() {
-  const form = document.createElement("form");
-  form.className = "ver-form";
+  const form = createForm();
+
+  // const form = document.createElement("form");
+  // form.className = "ver-form";
 
   // Title
   const title = document.createElement("h2");
@@ -34,19 +49,9 @@ export function createVerifyForm() {
   txtInfo.innerText =
     "Please check your mobile number 071*****12 continue to reset your password";
 
-  // // Input fields (old)
-  // const inputs = document.createElement("div");
-  // inputs.innerHTML = `<input type="password" class="input input-sm" placeholder="*"><input type="password" class="input input-sm" placeholder="*"><input type="password" class="input input-sm" placeholder="*"><input type="password" class="input input-sm" placeholder="*">`;
-  // inputs.className = "input-cols";
+  const inputs = createInputs();
 
-  // Input fields (new)
-  const inputs = document.createElement("div");
-  inputs.className = "input-cols";
-
-  const inputOne = createOTPInput();
-  const inputTwo = createOTPInput();
-  const inputThree = createOTPInput();
-  const inputFour = createOTPInput();
+  // inputs.append(inputOne, inputTwo, inputThree, inputFour);
 
   // Button
   const button = document.createElement("button");
@@ -69,7 +74,6 @@ export function createVerifyForm() {
   link.innerText = " Click here";
   link.href = "#";
 
-  inputs.append(inputOne, inputTwo, inputThree, inputFour);
   txtProblem.append(link);
 
   form.append(title, txtInfo, inputs, button, txtProblem);
