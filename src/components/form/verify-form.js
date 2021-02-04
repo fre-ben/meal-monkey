@@ -17,6 +17,11 @@ export function createVerifyForm() {
   const inputThree = createInputElement();
   const inputFour = createInputElement();
 
+  const messageElement = createElement("p", {
+    className: "msgElement",
+    innerText: "Placeholder",
+  });
+
   return createElement("form", {
     className: "ver-form",
     children: [
@@ -27,13 +32,14 @@ export function createVerifyForm() {
         innerText:
           "Please check your mobile number 071*****12 continue to reset your password",
       }),
+      messageElement,
       createElement("div", {
         className: "input-cols",
         children: [inputOne, inputTwo, inputThree, inputFour],
       }),
       createElement("input", {
         type: "submit",
-        innerText: "Next",
+        value: "Next",
         className: "btn",
       }),
       createElement("p", {
@@ -52,9 +58,13 @@ export function createVerifyForm() {
       const OTPInput = `${inputOne.value}${inputTwo.value}${inputThree.value}${inputFour.value}`;
       const secretPassword = "3333";
       if (OTPInput === secretPassword) {
-        alert("Your OTP is: " + OTPInput + " - That is correct!");
+        messageElement.innerText = "Confirmed!";
+        messageElement.style.visibility = "visible";
+        messageElement.style.color = "green";
       } else {
-        alert("Your OTP is: " + OTPInput + " - That is WROOOOOONG!");
+        messageElement.innerText = "Wrong password";
+        messageElement.style.visibility = "visible";
+        messageElement.style.color = "red";
       }
     },
   });
