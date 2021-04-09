@@ -48,7 +48,9 @@ a:hover {
   font-weight: bold;
 }
 
-h2 {
+h2,
+h3,
+h4 {
   color: var(--font-primary-color);
 }
 
